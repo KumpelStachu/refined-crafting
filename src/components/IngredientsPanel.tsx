@@ -20,9 +20,9 @@ export default function IngredientsPanel() {
 		<div className="container mx-auto">
 			<AddIngredient />
 
-			<h1 className="text-3xl font-bold mb-3">Ingredients list ({ingredientsCount})</h1>
+			<h1 className="mb-3 text-3xl font-bold">Ingredients list ({ingredientsCount})</h1>
 			{!!ingredientsCount && (
-				<table className="table table-compact w-full">
+				<table className="table w-full table-compact">
 					<thead>
 						<tr>
 							<th></th>
@@ -38,17 +38,21 @@ export default function IngredientsPanel() {
 								<th>{index + 1}</th>
 								<td className="w-16">
 									{craftables.includes(ingredient.key) ? (
-										<CubeIcon className="w-7 text-success mx-auto" />
+										<CubeIcon className="mx-auto w-7 text-success" />
 									) : (
-										<CubeTransparentIcon className="w-7 text-error mx-auto" />
+										<CubeTransparentIcon className="mx-auto w-7 text-error" />
 									)}
 								</td>
 								<td>{ingredient.name}</td>
 								<td>{ingredient.key}</td>
-								<td>
+								<td
+									className={craftables.includes(ingredient.key) ? 'tooltip tooltip-left' : ''}
+									data-tip="Delete recipe first"
+								>
 									<button
 										className="btn btn-sm btn-square btn-outline btn-error"
 										onClick={() => dispatch(remove(ingredient.key))}
+										disabled={craftables.includes(ingredient.key)}
 									>
 										<TrashIcon className="w-5" />
 									</button>

@@ -11,11 +11,10 @@ type Item = {
 }
 
 export default function AddRecipe() {
-	const [ingredients, dispatch] = useIngredients()
-
+	const [typeInput, setTypeInput] = useState<RecipeType>('crafting')
 	const [ingredientsList, setIngredientsList] = useState<Item[]>([])
 	const [resultsList, setResultsList] = useState<Item[]>([])
-	const [typeInput, setTypeInput] = useState<RecipeType>('crafting')
+	const [ingredients, dispatch] = useIngredients()
 
 	useEffect(() => {
 		setTypeInput(typeInput === 'processing' || resultsList.length > 1 ? 'processing' : 'crafting')
@@ -31,12 +30,16 @@ export default function AddRecipe() {
 
 	return (
 		<div className="grid grid-cols-2 gap-3">
-			<div className="flex items-center justify-start gap-3">
-				<RecipeIngredient onAdd={e => setIngredientsList([...ingredientsList, e])} />
-			</div>
-			<div className="flex items-center justify-end gap-3">
-				<RecipeIngredient onAdd={e => setResultsList([...resultsList, e])} />
-			</div>
+			<RecipeIngredient
+				className="flex items-center justify-start gap-3"
+				onAdd={e => setIngredientsList([...ingredientsList, e])}
+				exclude={resultsList.map(v => v.ingredient)}
+			/>
+			<RecipeIngredient
+				className="flex items-center justify-end gap-3"
+				onAdd={e => setResultsList([...resultsList, e])}
+				exclude={ingredientsList.map(v => v.ingredient)}
+			/>
 
 			<table className="table w-full mb-auto table-compact">
 				<thead>
@@ -108,7 +111,7 @@ export default function AddRecipe() {
 					<span className="label-text">Processing</span>
 				</label>
 				<button
-					className="btn btn-wide"
+					className="btn btn-wide btn-primary"
 					disabled={!(ingredientsList.length && resultsList.length)}
 					onClick={handleClick}
 				>

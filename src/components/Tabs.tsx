@@ -9,7 +9,7 @@ export default function Tabs({ children }: Props) {
 
 	return (
 		<div className="flex flex-col h-screen overflow-hidden">
-			<div className="tabs tabs-boxed justify-center sticky inset-x-0 top-0 z-10">
+			<div className="sticky inset-x-0 top-0 z-10 justify-center tabs tabs-boxed">
 				{children.map(({ type }, index) => (
 					<a
 						key={(type as any).title}
@@ -25,7 +25,7 @@ export default function Tabs({ children }: Props) {
 				style={{ transform: `translateX(-${selected}00%)` }}
 			>
 				{children.map(child => (
-					<div key={(child.type as any).title} className="w-full overflow-y-auto shrink-0 p-3">
+					<div key={(child.type as any).title} className="w-full p-3 overflow-y-auto scroll-smooth shrink-0">
 						{child}
 					</div>
 				))}

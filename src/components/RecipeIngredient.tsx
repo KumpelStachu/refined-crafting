@@ -1,20 +1,24 @@
-import { useMemo, useState } from 'react'
+import { FormEvent, useMemo, useState } from 'react'
 import useIngredients from '../hooks/useIngredients'
 import { nameToKey } from '../utils'
 
 type Props = {
 	onAdd(e: { ingredient: string; quantity: number }): void
+	className?: string
+	exclude?: string[]
 }
 
-export default function RecipeIngredient({ onAdd }: Props) {
+export default function RecipeIngredient({ onAdd, className = '', exclude = [] }: Props) {
 	const [quantityInput, setQuantityInput] = useState(1)
 	const [nameInput, setNameInput] = useState('')
 	const [ingredients] = useIngredients()
 
 	const nameError = useMemo(() => !ingredients[nameToKey(nameInput)], [ingredients, nameInput])
+	const numberError = useMemo(() => isNaN(quantityInput) || quantityInput < 1, [quantityInput])
 
-	function handleClick() {
-		if (nameError || quantityInput < 1) return
+	function handleSubmit(e: FormEvent) {
+		e.preventDefault()
+		if (nameError || numberError) return
 
 		onAdd({
 			ingredient: nameInput,
@@ -26,7 +30,7 @@ export default function RecipeIngredient({ onAdd }: Props) {
 	}
 
 	return (
-		<>
+		<form onSubmit={handleSubmit} className={className}>
 			<div className="form-control">
 				<label
 					className={`label -z-10 transition ${
@@ -43,7 +47,7 @@ export default function RecipeIngredient({ onAdd }: Props) {
 				>
 					<option disabled value=""></option>
 					{Object.values(ingredients).map(ingredient => (
-						<option key={ingredient.key} value={ingredient.key}>
+						<option key={ingredient.key} value={ingredient.key} disabled={exclude.includes(ingredient.key)}>
 							{ingredient.name}
 						</option>
 					))}
@@ -75,15 +79,15 @@ export default function RecipeIngredient({ onAdd }: Props) {
 				/>
 				<label
 					className={`label -z-10 transition ${
-						quantityInput < 1 ? 'translate-y-0 opacity-100' : '-translate-y-3 opacity-0'
+						numberError ? 'translate-y-0 opacity-100' : '-translate-y-3 opacity-0'
 					}`}
 				>
 					<span className="label-text text-error">Quantity &gt; 1</span>
 				</label>
 			</div>
-			<button className="btn btn-secondary" disabled={nameError || quantityInput < 1} onClick={handleClick}>
+			<button className="btn btn-secondary" disabled={nameError || numberError}>
 				Add
 			</button>
-		</>
+		</form>
 	)
 }

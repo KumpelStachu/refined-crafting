@@ -1,0 +1,609 @@
+{
+	"ingredients": {
+		"compact-machine-wall": {
+			"key": "compact-machine-wall",
+			"name": "Compact Machine Wall"
+		},
+		"modularium": {
+			"key": "modularium",
+			"name": "Modularium"
+		},
+		"modularium-blend": {
+			"key": "modularium-blend",
+			"name": "Modularium Blend"
+		},
+		"redstone": {
+			"key": "redstone",
+			"name": "Redstone"
+		},
+		"iron-grit": {
+			"key": "iron-grit",
+			"name": "Iron Grit"
+		},
+		"uranium-grit": {
+			"key": "uranium-grit",
+			"name": "Uranium Grit"
+		},
+		"machine-casing": {
+			"key": "machine-casing",
+			"name": "Machine Casing"
+		},
+		"oak-wood": {
+			"key": "oak-wood",
+			"name": "Oak Wood"
+		},
+		"oak-wood-planks": {
+			"key": "oak-wood-planks",
+			"name": "Oak Wood Planks"
+		},
+		"block-of-redstone": {
+			"key": "block-of-redstone",
+			"name": "Block of Redstone"
+		},
+		"tiny-compact-machine": {
+			"key": "tiny-compact-machine",
+			"name": "Tiny Compact Machine"
+		},
+		"tiny-machine-piece": {
+			"key": "tiny-machine-piece",
+			"name": "Tiny Machine Piece"
+		},
+		"small-compact-machine": {
+			"key": "small-compact-machine",
+			"name": "Small Compact Machine"
+		},
+		"small-machine-piece": {
+			"key": "small-machine-piece",
+			"name": "Small Machine Piece"
+		},
+		"normal-compact-machine": {
+			"key": "normal-compact-machine",
+			"name": "Normal Compact Machine"
+		},
+		"compact-fluid": {
+			"key": "compact-fluid",
+			"name": "Compact Fluid"
+		},
+		"normal-machine-piece": {
+			"key": "normal-machine-piece",
+			"name": "Normal Machine Piece"
+		},
+		"large-compact-machine": {
+			"key": "large-compact-machine",
+			"name": "Large Compact Machine"
+		},
+		"personal-shrinking-device": {
+			"key": "personal-shrinking-device",
+			"name": "Personal Shrinking Device"
+		},
+		"redstone-torch": {
+			"key": "redstone-torch",
+			"name": "Redstone Torch"
+		},
+		"stick": {
+			"key": "stick",
+			"name": "Stick"
+		},
+		"diamond-nugget": {
+			"key": "diamond-nugget",
+			"name": "Diamond Nugget"
+		},
+		"miniaturization-field-projector": {
+			"key": "miniaturization-field-projector",
+			"name": "Miniaturization Field Projector"
+		},
+		"boron-spaxelhoe": {
+			"key": "boron-spaxelhoe",
+			"name": "Boron Spaxelhoe"
+		},
+		"iron-ingot": {
+			"key": "iron-ingot",
+			"name": "Iron Ingot"
+		},
+		"boron-hoe": {
+			"key": "boron-hoe",
+			"name": "Boron Hoe"
+		},
+		"boron-axe": {
+			"key": "boron-axe",
+			"name": "Boron Axe"
+		},
+		"boron-shovel": {
+			"key": "boron-shovel",
+			"name": "Boron Shovel"
+		},
+		"boron-pickaxe": {
+			"key": "boron-pickaxe",
+			"name": "Boron Pickaxe"
+		},
+		"boron-sword": {
+			"key": "boron-sword",
+			"name": "Boron Sword"
+		},
+		"boron-ingot": {
+			"key": "boron-ingot",
+			"name": "Boron Ingot"
+		},
+		"boron-dust": {
+			"key": "boron-dust",
+			"name": "Boron Dust"
+		}
+	},
+	"recipes": [
+		{
+			"type": "processing",
+			"ingredients": [
+				{
+					"ingredient": "modularium",
+					"quantity": 4
+				}
+			],
+			"result": [
+				{
+					"ingredient": "compact-machine-wall",
+					"quantity": 1
+				}
+			]
+		},
+		{
+			"type": "processing",
+			"ingredients": [
+				{
+					"ingredient": "modularium-blend",
+					"quantity": 1
+				}
+			],
+			"result": [
+				{
+					"ingredient": "modularium",
+					"quantity": 1
+				}
+			]
+		},
+		{
+			"type": "crafting",
+			"ingredients": [
+				{
+					"ingredient": "redstone",
+					"quantity": 1
+				},
+				{
+					"ingredient": "iron-grit",
+					"quantity": 4
+				},
+				{
+					"ingredient": "uranium-grit",
+					"quantity": 4
+				}
+			],
+			"result": [
+				{
+					"ingredient": "modularium-blend",
+					"quantity": 1
+				}
+			]
+		},
+		{
+			"type": "crafting",
+			"ingredients": [
+				{
+					"ingredient": "modularium",
+					"quantity": 4
+				},
+				{
+					"ingredient": "block-of-redstone",
+					"quantity": 1
+				}
+			],
+			"result": [
+				{
+					"ingredient": "machine-casing",
+					"quantity": 2
+				}
+			]
+		},
+		{
+			"type": "crafting",
+			"ingredients": [
+				{
+					"ingredient": "oak-wood",
+					"quantity": 1
+				}
+			],
+			"result": [
+				{
+					"ingredient": "oak-wood-planks",
+					"quantity": 4
+				}
+			]
+		},
+		{
+			"type": "crafting",
+			"ingredients": [
+				{
+					"ingredient": "redstone",
+					"quantity": 9
+				}
+			],
+			"result": [
+				{
+					"ingredient": "block-of-redstone",
+					"quantity": 1
+				}
+			]
+		},
+		{
+			"type": "crafting",
+			"ingredients": [
+				{
+					"ingredient": "machine-casing",
+					"quantity": 1
+				},
+				{
+					"ingredient": "oak-wood-planks",
+					"quantity": 4
+				},
+				{
+					"ingredient": "compact-machine-wall",
+					"quantity": 4
+				}
+			],
+			"result": [
+				{
+					"ingredient": "tiny-compact-machine",
+					"quantity": 1
+				}
+			]
+		},
+		{
+			"type": "processing",
+			"ingredients": [
+				{
+					"ingredient": "tiny-compact-machine",
+					"quantity": 1
+				}
+			],
+			"result": [
+				{
+					"ingredient": "tiny-machine-piece",
+					"quantity": 1
+				}
+			]
+		},
+		{
+			"type": "crafting",
+			"ingredients": [
+				{
+					"ingredient": "machine-casing",
+					"quantity": 1
+				},
+				{
+					"ingredient": "tiny-machine-piece",
+					"quantity": 4
+				},
+				{
+					"ingredient": "compact-machine-wall",
+					"quantity": 4
+				}
+			],
+			"result": [
+				{
+					"ingredient": "small-compact-machine",
+					"quantity": 1
+				}
+			]
+		},
+		{
+			"type": "processing",
+			"ingredients": [
+				{
+					"ingredient": "small-compact-machine",
+					"quantity": 1
+				}
+			],
+			"result": [
+				{
+					"ingredient": "small-machine-piece",
+					"quantity": 1
+				}
+			]
+		},
+		{
+			"type": "crafting",
+			"ingredients": [
+				{
+					"ingredient": "machine-casing",
+					"quantity": 1
+				},
+				{
+					"ingredient": "small-machine-piece",
+					"quantity": 4
+				},
+				{
+					"ingredient": "compact-machine-wall",
+					"quantity": 4
+				}
+			],
+			"result": [
+				{
+					"ingredient": "normal-compact-machine",
+					"quantity": 1
+				}
+			]
+		},
+		{
+			"type": "processing",
+			"ingredients": [
+				{
+					"ingredient": "normal-compact-machine",
+					"quantity": 1
+				}
+			],
+			"result": [
+				{
+					"ingredient": "compact-fluid",
+					"quantity": 1
+				}
+			]
+		},
+		{
+			"type": "processing",
+			"ingredients": [
+				{
+					"ingredient": "compact-fluid",
+					"quantity": 1
+				}
+			],
+			"result": [
+				{
+					"ingredient": "normal-machine-piece",
+					"quantity": 1
+				}
+			]
+		},
+		{
+			"type": "crafting",
+			"ingredients": [
+				{
+					"ingredient": "machine-casing",
+					"quantity": 1
+				},
+				{
+					"ingredient": "normal-machine-piece",
+					"quantity": 4
+				},
+				{
+					"ingredient": "compact-machine-wall",
+					"quantity": 4
+				}
+			],
+			"result": [
+				{
+					"ingredient": "large-compact-machine",
+					"quantity": 1
+				}
+			]
+		},
+		{
+			"type": "crafting",
+			"ingredients": [
+				{
+					"ingredient": "personal-shrinking-device",
+					"quantity": 1
+				},
+				{
+					"ingredient": "redstone-torch",
+					"quantity": 1
+				},
+				{
+					"ingredient": "diamond-nugget",
+					"quantity": 2
+				},
+				{
+					"ingredient": "compact-machine-wall",
+					"quantity": 1
+				}
+			],
+			"result": [
+				{
+					"ingredient": "miniaturization-field-projector",
+					"quantity": 4
+				}
+			]
+		},
+		{
+			"type": "crafting",
+			"ingredients": [
+				{
+					"ingredient": "stick",
+					"quantity": 1
+				},
+				{
+					"ingredient": "redstone",
+					"quantity": 1
+				}
+			],
+			"result": [
+				{
+					"ingredient": "redstone-torch",
+					"quantity": 1
+				}
+			]
+		},
+		{
+			"type": "crafting",
+			"ingredients": [
+				{
+					"ingredient": "oak-wood-planks",
+					"quantity": 2
+				}
+			],
+			"result": [
+				{
+					"ingredient": "stick",
+					"quantity": 4
+				}
+			]
+		},
+		{
+			"type": "crafting",
+			"ingredients": [
+				{
+					"ingredient": "iron-ingot",
+					"quantity": 2
+				},
+				{
+					"ingredient": "boron-hoe",
+					"quantity": 1
+				},
+				{
+					"ingredient": "boron-axe",
+					"quantity": 1
+				},
+				{
+					"ingredient": "boron-shovel",
+					"quantity": 1
+				},
+				{
+					"ingredient": "boron-pickaxe",
+					"quantity": 1
+				},
+				{
+					"ingredient": "boron-sword",
+					"quantity": 1
+				}
+			],
+			"result": [
+				{
+					"ingredient": "boron-spaxelhoe",
+					"quantity": 1
+				}
+			]
+		},
+		{
+			"type": "processing",
+			"ingredients": [
+				{
+					"ingredient": "iron-grit",
+					"quantity": 1
+				}
+			],
+			"result": [
+				{
+					"ingredient": "iron-ingot",
+					"quantity": 1
+				}
+			]
+		},
+		{
+			"type": "crafting",
+			"ingredients": [
+				{
+					"ingredient": "stick",
+					"quantity": 2
+				},
+				{
+					"ingredient": "boron-ingot",
+					"quantity": 2
+				}
+			],
+			"result": [
+				{
+					"ingredient": "boron-hoe",
+					"quantity": 1
+				}
+			]
+		},
+		{
+			"type": "crafting",
+			"ingredients": [
+				{
+					"ingredient": "stick",
+					"quantity": 2
+				},
+				{
+					"ingredient": "boron-ingot",
+					"quantity": 3
+				}
+			],
+			"result": [
+				{
+					"ingredient": "boron-axe",
+					"quantity": 1
+				}
+			]
+		},
+		{
+			"type": "crafting",
+			"ingredients": [
+				{
+					"ingredient": "stick",
+					"quantity": 2
+				},
+				{
+					"ingredient": "boron-ingot",
+					"quantity": 1
+				}
+			],
+			"result": [
+				{
+					"ingredient": "boron-shovel",
+					"quantity": 1
+				}
+			]
+		},
+		{
+			"type": "crafting",
+			"ingredients": [
+				{
+					"ingredient": "stick",
+					"quantity": 2
+				},
+				{
+					"ingredient": "boron-ingot",
+					"quantity": 3
+				}
+			],
+			"result": [
+				{
+					"ingredient": "boron-pickaxe",
+					"quantity": 1
+				}
+			]
+		},
+		{
+			"type": "crafting",
+			"ingredients": [
+				{
+					"ingredient": "stick",
+					"quantity": 1
+				},
+				{
+					"ingredient": "boron-ingot",
+					"quantity": 2
+				}
+			],
+			"result": [
+				{
+					"ingredient": "boron-sword",
+					"quantity": 1
+				}
+			]
+		},
+		{
+			"type": "processing",
+			"ingredients": [
+				{
+					"ingredient": "boron-dust",
+					"quantity": 1
+				}
+			],
+			"result": [
+				{
+					"ingredient": "boron-ingot",
+					"quantity": 1
+				}
+			]
+		}
+	]
+}

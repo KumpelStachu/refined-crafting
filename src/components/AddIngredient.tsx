@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { FormEvent, useMemo, useState } from 'react'
 import useIngredients from '../hooks/useIngredients'
 import { add } from '../store/ingredientsSlice'
 import { nameToKey } from '../utils'
@@ -9,14 +9,15 @@ export default function AddIngredient() {
 
 	const error = useMemo(() => !!ingredients[nameToKey(input)], [ingredients, input])
 
-	function handleClick() {
+	function handleSubmit(e: FormEvent) {
+		e.preventDefault()
 		if (!input) return
 		dispatch(add(input))
 		setInput('')
 	}
 
 	return (
-		<div className="flex items-center justify-center gap-3">
+		<form onSubmit={handleSubmit} className="flex items-center justify-center gap-3">
 			<div className="form-control">
 				<label
 					className={`label -z-10 transition ${
@@ -40,9 +41,9 @@ export default function AddIngredient() {
 					<span className="label-text text-error">Ingredient already exists</span>
 				</label>
 			</div>
-			<button className="btn btn-secondary" disabled={error || !input} onClick={handleClick}>
+			<button className="btn btn-secondary" disabled={error || !input}>
 				Add
 			</button>
-		</div>
+		</form>
 	)
 }

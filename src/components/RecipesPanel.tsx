@@ -41,14 +41,36 @@ export default function RecipesPanel() {
 								<td>
 									{recipe.result.map(({ ingredient, quantity }, index) => (
 										<span key={index}>
-											{ingredients[ingredient].name} &times; {quantity}
+											{ingredients[ingredient]?.name ? (
+												ingredients[ingredient].name
+											) : (
+												<span
+													className="cursor-help text-error tooltip tooltip-error"
+													data-tip="Unknown item"
+												>
+													{ingredient}
+												</span>
+											)}
+											<span className="font-bold"> &times; </span>
+											{quantity}
 										</span>
 									))}
 								</td>
 								<td>
 									{recipe.ingredients.map(({ ingredient, quantity }) => (
 										<div key={ingredient}>
-											{ingredients[ingredient].name} &times; {quantity}
+											{ingredients[ingredient]?.name ? (
+												ingredients[ingredient].name
+											) : (
+												<span
+													className="cursor-help text-error tooltip tooltip-error"
+													data-tip="Unknown item"
+												>
+													{ingredient}
+												</span>
+											)}
+											<span className="font-bold"> &times; </span>
+											{quantity}
 										</div>
 									))}
 								</td>
